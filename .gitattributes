@@ -1,0 +1,10 @@
+# Set the default behavior, in case people don't have core.autocrlf set.
+*.gitattributes  text=input
+*.gitignore      text=input
+*.xml  text=input
+*.jade text=input
+*.css  text=input
+*.js   text=input
+
+# Consider all unspecified files binary and should not be modified.
+*.* binary

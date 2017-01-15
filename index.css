@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans&subset=cyrillic');
+
+html {
+    font-size: 14px;
+    font-family: "PT Sans", sans-serif;
+    background-color: black;
+}
+
+body {
+    font-size: 100%;    /* 14px */
+    line-height: 157%;  /* 22px */
+    background-color: #ffffff;
+    width: 1400px;
+    margin: auto;
+}
+
+body .graytext{
+    color: #767676
+}
+body .whitetext{
+    color: #ffffff
+}
+
+.header, .footer, .menu {
+    width: 100%;
+    height: 210px;
+}
+
+.header-content, .footer-content, .menu-content {
+    margin: auto;
+    width: 1000px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.header {
+    display: block;
+    background-color: #dcdcdc;
+}
+
+.header .company-logo {
+    background: url("images/header-company-logo-1px.png");
+
+}
+
+.logo .graytext,
+.header .logo .graytext {
+    color: #777777
+}
+
+
+
