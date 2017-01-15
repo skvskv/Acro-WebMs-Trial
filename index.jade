@@ -3,6 +3,7 @@ html
     head
         script(type="text/javascript" src="https://unpkg.com/vue/dist/vue.js")
         link(rel="stylesheet" href="normalize-v1.css")
+        link(rel="stylesheet" href="utility.css")
         link(rel="stylesheet" href="index.css")
 
     body
@@ -10,7 +11,7 @@ html
             // 10+980+10
             div.header-content
                 // 100 px
-                div.company-logo
+                div.company-logo.image-wrapper
                     img(v-bind:src="companyLogo.src" v-bind:width="companyLogo.width" v-bind:height="companyLogo.height" v-bind:alt="companyLogo.alt")
                 div.company-brief
                     span.name Название компании

@@ -60,15 +60,8 @@ body .whitetext{
 
 .header .company-logo {
     display: inline-block;
-    padding: 0;
-    line-height: 0;
-    overflow: hidden;
     height: 100px;
     width: 100px;
-}
-
-.header .company-logo img {
-    /*display: block;*/
 }
 
 .header .company-brief, .header .company-brief > span {

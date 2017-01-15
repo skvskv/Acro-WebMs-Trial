@@ -1,0 +1,10 @@
+.image-wrapper {
+    line-height: 0;
+    overflow: hidden;
+    padding: 0;
+}
+
+/*.image-wrapper > img {*/
+    /*display: block;*/
+/*}*/
+
