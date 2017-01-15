@@ -1,4 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=PT+Sans&subset=cyrillic');
+/**
+*   Header loooks fine down to W:1024px (on initial settings)
+*   Ok on W:768px (with .header-content width: auto)
+*   Bit ugly slogan on W:640px (with .header-content width: auto)
+*
+*/
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&subset=cyrillic,cyrillic-ext,latin-ext');
 
 html {
     font-size: 14px;
@@ -10,7 +16,8 @@ body {
     font-size: 100%;    /* 14px */
     line-height: 157%;  /* 22px */
     background-color: #ffffff;
-    width: 1400px;
+    max-width: 1400px;
+    width: 100%;
     margin: auto;
 }
 
@@ -26,26 +33,57 @@ body .whitetext{
     height: 210px;
 }
 
-.header-content, .footer-content, .menu-content {
-    margin: auto;
-    width: 1000px;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
 .header {
     display: block;
     background-color: #dcdcdc;
 }
 
-.header .company-logo {
-    background: url("images/header-company-logo-1px.png");
-
-}
-
 .logo .graytext,
 .header .logo .graytext {
     color: #777777
+}
+
+.header-content, .footer-content, .menu-content {
+    margin: auto;
+    height: 100%;
+    width: 1000px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.header-content > div {
+    margin-right: 13px;
+}
+
+.header .company-logo {
+    display: inline-block;
+    padding: 0;
+    line-height: 0;
+    overflow: hidden;
+    height: 100px;
+    width: 100px;
+}
+
+.header .company-logo img {
+    /*display: block;*/
+}
+
+.header .company-brief, .header .company-brief > span {
+    display: inline-block;
+}
+
+.header .company-brief .name {
+    max-width: 200px;
+    font-weight: bold;
+    font-size: 240%;
+    line-height: 80%;
+}
+
+.header .company-brief .slogan {
+    font-size: 112%;
 }
 
 
