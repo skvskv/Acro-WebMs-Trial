@@ -1,0 +1,32 @@
+html {
+    font-family: "PT Sans", sans-serif;
+    background-color: black;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+body .graytext{
+    color: #767676
+}
+
+body .whitetext{
+    color: #ffffff
+}
+
+.header {
+    background-color: #dcdcdc;
+}
+
+.footer {
+    background-color: #777777;
+    color: #ffffff;
+}
+
+.logo .graytext,
+.header .logo .graytext {
+    color: #777777
+}
+
+

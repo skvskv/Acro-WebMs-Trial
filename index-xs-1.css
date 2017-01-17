@@ -1,0 +1,94 @@
+/**
+*   Looks rather decent up to 480px wide viewport
+*
+*/
+
+html {
+    font-size: 14px;
+}
+
+body {
+    font-size: 75%;
+    line-height: 157%;
+    max-width: 1400px;
+    width: 100%;
+    margin: auto;
+    height: 2000px;
+}
+
+
+.header, .footer, .menu {
+    width: 100%;
+}
+
+.header {
+    display: block;
+}
+
+
+.header-content, .footer-content, .menu-content {
+    width: auto;
+    height: 210px;
+}
+
+.header-content, .footer-content {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.header .company-logo {
+    height: 100px;
+    width: 100px;
+}
+
+.header .company-brief {
+    height: 100px;
+}
+.company-brief .name {
+    top: 10px;
+    font-weight: bold;
+    font-size: 310%;
+    line-height: 80%;
+}
+.company-brief .slogan {
+    bottom: 10px;
+    font-weight: bold;
+    font-size: 135%;
+}
+
+.company-phones {
+    margin-top: 110px;
+    font-size: 286%;
+    line-height: 110%;
+}
+.company-phones ul.phones-list {
+    padding: 0;
+}
+
+.company-phones ul.phones-list > li {
+}
+.company-phones ul.phones-list > li:not(:last-child)::after {
+}
+.header .company-phones, .header .company-brief, .header .company-brief > span {
+}
+
+
+.footer-content {
+    position: relative;
+}
+
+.copyright-info {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+.copyright-info > span {
+    display: inline-block;
+}
+.copyright-info > span:not(:last-child) {
+    padding-right: 10px;
+}
+.copyright-info > span:not(:last-child)::after {
+    /*content: ',';*/
+}

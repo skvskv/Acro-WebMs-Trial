@@ -1,0 +1,19 @@
+body {
+    position: relative;
+}
+
+.footer {
+    height: 220px;
+    position: absolute;
+    bottom: 0px;
+}
+
+
+
+.company-brief {
+    position: relative;
+}
+
+.company-brief > * {
+    position: absolute;
+}

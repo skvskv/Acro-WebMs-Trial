@@ -1,10 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&subset=cyrillic,cyrillic-ext,latin-ext');
+
 .image-wrapper {
     line-height: 0;
     overflow: hidden;
     padding: 0;
 }
 
-/*.image-wrapper > img {*/
-    /*display: block;*/
-/*}*/
+.image-wrapper > img {
+    display: block;
+}
 
+.phones-list {
+    list-style-type: none;
+}
+
+.block-horizontally-centered {
+    width: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.element-vertically-centered {
+    position: relative;
+    top: 50%;
+    -webkit-transform: perspective(1px) translateY(-50%);
+    -ms-transform: perspective(1px) translateY(-50%);
+    transform: perspective(1px) translateY(-50%);
+}
+
+@media all AND (min-width:310px) AND (max-width:991px) {
+    .xs-element-vertically-centered {
+        position: relative;
+        top: 50%;
+        -webkit-transform: perspective(1px) translateY(-50%);
+        -ms-transform: perspective(1px) translateY(-50%);
+        transform: perspective(1px) translateY(-50%);
+    }
+}
+
+@media all AND (min-width:992px) AND (max-width:1199px) {
+    .lg-element-vertically-centered {
+        position: relative;
+        top: 50%;
+        -webkit-transform: perspective(1px) translateY(-50%);
+        -ms-transform: perspective(1px) translateY(-50%);
+        transform: perspective(1px) translateY(-50%);
+    }
+}

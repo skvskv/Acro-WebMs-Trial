@@ -1,28 +1,54 @@
 doctype html
-html
+html(lang="ru")
     head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,initial-scale=1,user-scalable=no")
+        meta(name="format-detection" content="telephone=no")
+        meta(name="mobile-web-app-capable" content="yes")
+        title Название компании
+
         script(type="text/javascript" src="https://unpkg.com/vue/dist/vue.js")
         link(rel="stylesheet" href="normalize-v1.css")
+        link(rel="stylesheet" href="bootstrap/css/bootstrap.css")
         link(rel="stylesheet" href="utility.css")
-        link(rel="stylesheet" href="index.css")
+        link(rel="stylesheet" href="units.css")
+        link(rel="stylesheet" href="color-theme.css")
+        link(rel="stylesheet" href="index-xs-1.css" media="all AND (min-width:310px) AND (max-width:1024px)")
+        //link(rel="stylesheet" href="index.css")
 
     body
         div.header#header(v-if="visible")
+
             // 10+980+10
-            div.header-content
+            div.header-content.block-horizontally-centered.row
+                //div#header-left-block
                 // 100 px
-                div.company-logo.image-wrapper
-                    img(v-bind:src="companyLogo.src" v-bind:width="companyLogo.width" v-bind:height="companyLogo.height" v-bind:alt="companyLogo.alt")
-                div.company-brief
+                //div.company-logo.image-wrapper.lg-element-vertically-centered.col-xs-offset-1
+                div.company-logo.image-wrapper.lg-element-vertically-centered.col-xs-1.col-xs-offset-1
+                    img(v-if="logo.visible" v-bind:src="logo.src" v-bind:width="logo.width" v-bind:height="logo.height" v-bind:alt="logo.alt")
+
+                div(v-if="brief.visible").company-brief.col-xs-20.col-xs-offset-2
                     span.name Название компании
                     br
                     span.slogan самая клевая компания
 
-                //div.company-brief Название компании
-                //    br
-                //    span.slogan самая клевая компания
+                //div#header-right-block
+                div(v-if="phones.visible").company-phones.col-xs-offset-1
+                    ul.phones-list
+                        li +7(499) 777-77-77
+                        li +7(499) 777-77-77
 
-                div.company-phones
-                     span
+
+
+        div.footer#footer(v-if="visible")
+            div.footer-content.block-horizontally-centered.row
+                div.copyright-info
+                    span.note &copy; 2012-2013 ЗАО &laquo;Компания&raquo;
+                    span.email info@name.ru
+
+
+                div.footer-navigation
+                    nav
+
 
         script(type="text/javascript" src="index.js")
