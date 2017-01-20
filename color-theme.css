@@ -11,7 +11,7 @@ body .graytext{
     color: #767676
 }
 
-body .whitetext{
+body .whitetext, body .whitetext * {
     color: #ffffff
 }
 

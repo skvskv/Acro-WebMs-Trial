@@ -3,12 +3,13 @@ body {
 }
 
 .footer {
-    height: 220px;
     position: absolute;
-    bottom: 0px;
+    bottom: 0;
 }
 
-
+.header-content, .footer-content, .menu-content {
+    width: auto;
+}
 
 .company-brief {
     position: relative;

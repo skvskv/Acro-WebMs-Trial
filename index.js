@@ -29,9 +29,10 @@ window.addEventListener('load',function () {
     });
 
     scope.footer = new Vue({
-        el: 'footer',
+        el: '#footer',
         data: {
             visible: true
+            // visible: false
         }
     });
 

@@ -26,12 +26,15 @@ body {
 }
 
 
-.header-content, .footer-content, .menu-content {
-    width: auto;
+.header-content {
     height: 210px;
 }
 
-.header-content, .footer-content {
+.menu-content {
+    height: 210px;
+}
+
+.header-content{
     padding-top: 10px;
     padding-bottom: 10px;
 }
@@ -72,11 +75,6 @@ body {
 .header .company-phones, .header .company-brief, .header .company-brief > span {
 }
 
-
-.footer-content {
-    position: relative;
-}
-
 .copyright-info {
     position: absolute;
     bottom: 10px;
@@ -89,6 +87,33 @@ body {
 .copyright-info > span:not(:last-child) {
     padding-right: 10px;
 }
-.copyright-info > span:not(:last-child)::after {
-    /*content: ',';*/
+
+
+.footer-content {
+    height: 180px;
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.footer-navigation {
+    width: 100%;
+    margin-right: auto;
+    margin-left:  auto;
+}
+.footer-navigation nav {
+    margin-left: 16%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.footer-navigation nav {
+    font-size: 120%;
+    line-height: 120%;
+    height: 8rem;
+}
+.footer-navigation nav > a {
+    width: 50%;
+    height: 2.5em;
+    text-decoration: underline;
 }

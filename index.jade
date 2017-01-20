@@ -17,7 +17,7 @@ html(lang="ru")
         //link(rel="stylesheet" href="index.css")
 
     body
-        div.header#header(v-if="visible")
+        header.header#header(v-if="visible")
 
             // 10+980+10
             div.header-content.block-horizontally-centered.row
@@ -40,15 +40,19 @@ html(lang="ru")
 
 
 
-        div.footer#footer(v-if="visible")
-            div.footer-content.block-horizontally-centered.row
-                div.copyright-info
+        footer.footer#footer(v-if="visible")
+            div.footer-content.whitetext.block-horizontally-centered.row
+                section.copyright-info
                     span.note &copy; 2012-2013 ЗАО &laquo;Компания&raquo;
                     span.email info@name.ru
 
 
-                div.footer-navigation
+                section.footer-navigation
                     nav
-
+                        a(href='#') Главная
+                        a(href='#') Каталог
+                        a(href='#') Доставка и оплата
+                        a(href='#') Прайс-лист
+                        a(href='#') Контакты
 
         script(type="text/javascript" src="index.js")
