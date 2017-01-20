@@ -13,7 +13,8 @@ html(lang="ru")
         link(rel="stylesheet" href="utility.css")
         link(rel="stylesheet" href="units.css")
         link(rel="stylesheet" href="color-theme.css")
-        link(rel="stylesheet" href="index-xs-1.css" media="all AND (min-width:310px) AND (max-width:1024px)")
+        //link(rel="stylesheet" href="index-xs-1.css" media="all AND (min-width:310px) AND (max-width:1024px)")
+        link(rel="stylesheet" href="index-sm-1.css" media="all AND (min-width:310px) AND (max-width:1024px)")
         //link(rel="stylesheet" href="index.css")
 
     body
@@ -42,12 +43,12 @@ html(lang="ru")
 
         footer.footer#footer(v-if="visible")
             div.footer-content.whitetext.block-horizontally-centered.row
-                section.copyright-info
+                section.copyright-info(v-if="copyrightInfo.visible")
                     span.note &copy; 2012-2013 ЗАО &laquo;Компания&raquo;
                     span.email info@name.ru
 
 
-                section.footer-navigation
+                section.footer-navigation(v-if="navigation.visible")
                     nav
                         a(href='#') Главная
                         a(href='#') Каталог

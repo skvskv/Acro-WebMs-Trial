@@ -31,8 +31,15 @@ window.addEventListener('load',function () {
     scope.footer = new Vue({
         el: '#footer',
         data: {
-            visible: true
-            // visible: false
+            visible: true,
+            copyrightInfo: {
+                visible: true
+                // visible: false
+            },
+            navigation: {
+                // visible: true
+                visible: false
+            }
         }
     });
 
