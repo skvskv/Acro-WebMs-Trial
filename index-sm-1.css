@@ -156,7 +156,8 @@ body {
     text-decoration: none;
 }
 .nav-main nav > a:hover,
-.nav-main ul > a:hover {
+.nav-main ul > li > a:hover
+{
     text-decoration: underline;
 }
 
