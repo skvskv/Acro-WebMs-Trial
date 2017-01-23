@@ -13,7 +13,7 @@ body {
     max-width: 1400px;
     width: 100%;
     margin: auto;
-    height: 2000px;
+    /*height: 2000px;*/
 }
 
 
@@ -78,11 +78,30 @@ body {
 
 
 
-.menu {
+.nav-main {
     width: 100%;
+    font-size: 120%;
+    /*line-height: 120%;*/
 }
-.menu-content {
-    height: 210px;
+.nav-main nav {
+    display: none;
+}
+.nav-main a {
+    text-decoration: none;
+}
+.nav-main a:hover {
+    text-decoration: underline;
+}
+/*.nav-main a:not(:first-child) {*/
+    /*display: none;*/
+/*}*/
+
+.content-container {
+    padding-left: 5px;
+    padding-right: 10px;
+}
+.content-container .content {
+    text-align: justify;
 }
 
 
@@ -92,11 +111,9 @@ body {
     width: 100%;
 }
 .footer-content {
-    /*height: 180px;*/
-    max-height: 180px;
-    min-height: 35px;
+    height: 220px;
     position: relative;
-    padding-top: 10px;
+    padding-top: 50px;
     padding-bottom: 10px;
 }
 .footer-navigation {

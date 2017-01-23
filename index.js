@@ -37,13 +37,63 @@ window.addEventListener('load',function () {
                 // visible: false
             },
             navigation: {
-                // visible: true
-                visible: false
+                visible: true
+                // visible: false
             }
         }
     });
 
+    scope.content_area = new Vue({
+        el: '#content-area',
+        data: {
+            mainmenu: {
+                visible: true
+            },
+            news: {
+                visible: true
+            },
+            content: {
+                visible: true
+            },
+            nav_main: {
+                display: undefined
+            }
+        },
+        methods: {
+            navHamburgerCkickHandler: function () {
+                console.warn(JSON.stringify(this.nav_main.display));
+                if (this.nav_main.display === 'block') {
+                    this.navMobileMenuHide();
+                }
+                else {
+                    this.navMobileMenuShow();
+                }
+            },
+            navMobileMenuShow: function () {
+                this.nav_main.display = 'block';
 
+            },
+            navMobileMenuHide: function () {
+                this.nav_main.display = 'none';
+
+            }
+        }
+    });
+
+    // scope.navmain = new Vue({
+    //     el: '#nav-main',
+    //     data: {
+    //         color: undefined
+    //     },
+    //     methods:{
+    //         clickHandler: function () {
+    //
+    //         },
+    //         showMenu: function () {
+    //
+    //         }
+    //     }
+    // });
 
 }, false);
 

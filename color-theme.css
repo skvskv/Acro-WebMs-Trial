@@ -7,26 +7,33 @@ body {
     background-color: #ffffff;
 }
 
-body .graytext{
-    color: #767676
-}
-
-body .whitetext, body .whitetext * {
+.whitetext,
+.whitetext a,
+.whitetext a:visited,
+.whitetext a:focus
+{
     color: #ffffff
 }
 
-.header {
-    background-color: #dcdcdc;
-}
-
-.footer {
-    background-color: #777777;
-    color: #ffffff;
-}
-
-.logo .graytext,
-.header .logo .graytext {
+.graytext,
+.graytext a,
+.graytext a:visited,
+.graytext a:focus {
     color: #777777
 }
 
+.lightgray-bg {
+    background-color: #dcdcdc;
+}
 
+.graybg {
+    background-color: #777777;
+}
+
+.webpage::after {
+    background-color: #777777;
+    color: #ffffff;
+}
+.webpage:last-child::after {
+    background-color: #ffffff;
+}

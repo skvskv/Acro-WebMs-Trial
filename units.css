@@ -2,6 +2,19 @@ body {
     position: relative;
 }
 
+.webpage {
+    height: 100%;
+}
+
+.webpage::after {
+    content: '';
+    display: block;
+    height: 220px;
+}
+.webpage:last-child::after {
+    height: 15px;
+}
+
 .footer {
     position: absolute;
     bottom: 0;
@@ -18,3 +31,11 @@ body {
 .company-brief > * {
     position: absolute;
 }
+
+a,
+a:visited,
+a:focus
+{
+    text-decoration: none;
+}
+

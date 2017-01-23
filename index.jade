@@ -7,53 +7,118 @@ html(lang="ru")
         meta(name="mobile-web-app-capable" content="yes")
         title Название компании
 
-        script(type="text/javascript" src="https://unpkg.com/vue/dist/vue.js")
         link(rel="stylesheet" href="normalize-v1.css")
         link(rel="stylesheet" href="bootstrap/css/bootstrap.css")
+        //link(rel="stylesheet" href="responsive-nav/responsive-nav.css")
         link(rel="stylesheet" href="utility.css")
         link(rel="stylesheet" href="units.css")
         link(rel="stylesheet" href="color-theme.css")
-        //link(rel="stylesheet" href="index-xs-1.css" media="all AND (min-width:310px) AND (max-width:1024px)")
-        link(rel="stylesheet" href="index-sm-1.css" media="all AND (min-width:310px) AND (max-width:1024px)")
+        link(rel="stylesheet" href="index-xs-1.css" media="all AND (min-width:310px) AND (max-width:449px)")
+        link(rel="stylesheet" href="index-sm-1.css" media="all AND (min-width:450px) AND (max-width:1024px)")
         //link(rel="stylesheet" href="index.css")
 
     body
-        header.header#header(v-if="visible")
+        div.realm
+            div.webpage
 
-            // 10+980+10
-            div.header-content.block-horizontally-centered.row
-                //div#header-left-block
-                // 100 px
-                //div.company-logo.image-wrapper.lg-element-vertically-centered.col-xs-offset-1
-                div.company-logo.image-wrapper.lg-element-vertically-centered.col-xs-1.col-xs-offset-1
-                    img(v-if="logo.visible" v-bind:src="logo.src" v-bind:width="logo.width" v-bind:height="logo.height" v-bind:alt="logo.alt")
+                header(v-if="visible").header.lightgray-bg#header
+                    div.header-content.block-horizontally-centered.row
+                        div.company-logo.image-wrapper.lg-element-vertically-centered.col-xs-1.col-xs-offset-1
+                            img(v-if="logo.visible" v-bind:src="logo.src" v-bind:width="logo.width" v-bind:height="logo.height" v-bind:alt="logo.alt")
 
-                div(v-if="brief.visible").company-brief.col-xs-20.col-xs-offset-2
-                    span.name Название компании
-                    br
-                    span.slogan самая клевая компания
+                        div(v-if="brief.visible").company-brief.graytext.col-xs-20.col-xs-offset-2
+                            span.name Название компании
+                            br
+                            span.slogan самая клевая компания
 
-                //div#header-right-block
-                div(v-if="phones.visible").company-phones.col-xs-offset-1
-                    ul.phones-list
-                        li +7(499) 777-77-77
-                        li +7(499) 777-77-77
-
+                        div(v-if="phones.visible").company-phones.graytext.col-xs-offset-1
+                            ul.phones-list
+                                li
+                                    a(href='callto://74997777777') +7(499) 777-77-77
+                                li
+                                    a(href='callto://74997777777') +7(499) 777-77-77
 
 
-        footer.footer#footer(v-if="visible")
-            div.footer-content.whitetext.block-horizontally-centered.row
-                section.copyright-info(v-if="copyrightInfo.visible")
-                    span.note &copy; 2012-2013 ЗАО &laquo;Компания&raquo;
-                    span.email info@name.ru
+                div.content-area#content-area
+                    section.nav-main.graybg.whitetext#nav-main(v-if="mainmenu.visible")
+                        span.glyphicon.glyphicon-menu-hamburger(style="display: block; font-size:400%;" v-on:click='navHamburgerCkickHandler' v-bind:style='{ display: ("block" === nav_main.display) ? "none" : "block" }')
+                        nav(v-bind:style='{ display: nav_main.display}')
+                            a(href='#') Главная
+                            a(href='#') Каталог
+                            a(href='#') Доставка и оплата
+                            a(href='#') Прайс-лист
+                            a(href='#') Контакты
+
+                    section.news-container(v-if="news.visible")
+                        span.news-heading Новости
+                        span.news-article-date 14 сентября 2013 г.
+                        span.news-article-content Редизайн веб-сайта архитектурного бюро.
+                        span.news-article-date 14 сентября 2013 г.
+                        span.news-article-content Раскрутка интернет-магазина декоративных стикеров и виниловых наклеек.
+                        span.news-article-date 14 сентября 2013 г.
+                        span.news-article-content SEO-продвижение сайта поставщика дизель генераторов.
+                        span.news-article-date 14 сентября 2013 г.
+                        span.news-article-content Поисковое продвижение веб-сайта поставщика гидрооборудования.
+                        span.news-archive Архив новостей
 
 
-                section.footer-navigation(v-if="navigation.visible")
-                    nav
-                        a(href='#') Главная
-                        a(href='#') Каталог
-                        a(href='#') Доставка и оплата
-                        a(href='#') Прайс-лист
-                        a(href='#') Контакты
+                    section.content-container(v-if="content.visible")
+                        h1 Lorem Ipsum
+                        section.content
+                            p.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam blandit dictum sapien, ut efficitur purus varius ut.
+                                In hac habitasse platea dictumst. In scelerisque leo sit amet mauris faucibus gravida. Maecenas non turpis ex.
+                                Quisque luctus orci at erat lobortis suscipit. Sed augue nulla, volutpat non ex et, consectetur ullamcorper lacus.
+                                Vestibulum a malesuada massa. In rhoncus mattis sapien, sit amet aliquam lorem. Morbi vel pulvinar neque.
+                                Suspendisse venenatis lobortis nibh, at malesuada justo congue vitae. Mauris scelerisque mollis cursus. Fusce dictum in metus id efficitur.
+                            p.
+                                Quisque eget dictum mauris, non tempor risus. In vestibulum erat fermentum, ullamcorper metus eu, elementum risus.
+                                Proin nunc massa, varius ut gravida a, maximus in urna. Fusce consequat vehicula lacus, id ullamcorper libero lobortis at.
+                                Morbi eu nisl non erat cursus vehicula. Donec eu pulvinar turpis. Mauris et augue in massa consequat ultricies.
+                                Nullam hendrerit ante eget dolor ullamcorper pharetra. Aliquam quis tempor erat. Cras eu egestas turpis.
+                                Nulla vitae lorem tempor, lacinia purus luctus, pharetra tortor. Nam eget ante sodales, gravida urna eu, congue purus.
+                                Sed rutrum malesuada tortor eu eleifend. Quisque imperdiet dapibus nibh. Nulla ullamcorper risus erat, a feugiat massa feugiat at.
+                            p.
+                                Mauris mattis auctor ligula, at ultrices orci lobortis ut. Maecenas porta eget mauris ac tempor.
+                                Quisque auctor ornare purus, sit amet imperdiet enim luctus id. In risus massa, fringilla nec justo non, dignissim imperdiet ex.
+                                Maecenas risus nisi, mattis eu rhoncus sed, cursus at dui. Sed ut eros eget magna egestas euismod.
+                                Mauris fermentum diam id maximus lobortis.
+                            p.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam blandit dictum sapien, ut efficitur purus varius ut.
+                                In hac habitasse platea dictumst. In scelerisque leo sit amet mauris faucibus gravida. Maecenas non turpis ex.
+                                Quisque luctus orci at erat lobortis suscipit. Sed augue nulla, volutpat non ex et, consectetur ullamcorper lacus.
+                                Vestibulum a malesuada massa. In rhoncus mattis sapien, sit amet aliquam lorem. Morbi vel pulvinar neque.
+                                Suspendisse venenatis lobortis nibh, at malesuada justo congue vitae. Mauris scelerisque mollis cursus. Fusce dictum in metus id efficitur.
+                            p.
+                                Quisque eget dictum mauris, non tempor risus. In vestibulum erat fermentum, ullamcorper metus eu, elementum risus.
+                                Proin nunc massa, varius ut gravida a, maximus in urna. Fusce consequat vehicula lacus, id ullamcorper libero lobortis at.
+                                Morbi eu nisl non erat cursus vehicula. Donec eu pulvinar turpis. Mauris et augue in massa consequat ultricies.
+                                Nullam hendrerit ante eget dolor ullamcorper pharetra. Aliquam quis tempor erat. Cras eu egestas turpis.
+                                Nulla vitae lorem tempor, lacinia purus luctus, pharetra tortor. Nam eget ante sodales, gravida urna eu, congue purus.
+                                Sed rutrum malesuada tortor eu eleifend. Quisque imperdiet dapibus nibh. Nulla ullamcorper risus erat, a feugiat massa feugiat at.
+                            p.
+                                Mauris mattis auctor ligula, at ultrices orci lobortis ut. Maecenas porta eget mauris ac tempor.
+                                Quisque auctor ornare purus, sit amet imperdiet enim luctus id. In risus massa, fringilla nec justo non, dignissim imperdiet ex.
+                                Maecenas risus nisi, mattis eu rhoncus sed, cursus at dui. Sed ut eros eget magna egestas euismod.
+                                Mauris fermentum diam id maximus lobortis.
 
+
+            footer.footer.graybg.whitetext#footer(v-if="visible")
+                div.footer-content.whitetext.block-horizontally-centered.row
+                    section.copyright-info(v-if="copyrightInfo.visible")
+                        span.note &copy; 2012-2013 ЗАО &laquo;Компания&raquo;
+                        span.email info@name.ru
+
+
+                    section.footer-navigation(v-if="navigation.visible")
+                        nav
+                            a(href='#') Главная
+                            a(href='#') Каталог
+                            a(href='#') Доставка и оплата
+                            a(href='#') Прайс-лист
+                            a(href='#') Контакты
+        script(type="text/javascript" src="https://unpkg.com/vue/dist/vue.js")
+        //script(type="text/javascript" src="responsive-nav/responsive-nav.js")
+        //script(type="text/javascript" src="responsive-nav/responsive-nav.min.js")
         script(type="text/javascript" src="index.js")
+

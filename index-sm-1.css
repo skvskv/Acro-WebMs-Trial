@@ -1,5 +1,15 @@
 /**
-*   Looks rather decent up to 480px wide viewport
+*
+*
+*
+*
+*
+*
+*   Footer looks good from W350px,
+*   well from W400px to 500px to 600px,
+*   good from W700px
+*
+*
 *
 */
 
@@ -62,20 +72,6 @@ body {
 }
 .header .company-phones, .header .company-brief, .header .company-brief > span {
 }
-.copyright-info {
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-    text-align: center;
-}
-.copyright-info > span {
-    display: inline-block;
-}
-.copyright-info > span:not(:last-child) {
-    padding-right: 10px;
-}
-
-
 
 
 .menu {
@@ -86,38 +82,40 @@ body {
 }
 
 
-
-
 .footer {
     width: 100%;
 }
 .footer-content {
-    /*height: 180px;*/
-    max-height: 180px;
-    min-height: 35px;
+    height: 220px;
     position: relative;
-    padding-top: 10px;
+    padding-top: 50px;
     padding-bottom: 10px;
 }
-.footer-navigation {
-    width: 100%;
-    margin-right: auto;
-    margin-left:  auto;
+.copyright-info {
+    position: absolute;
+    display: inline-block;
+    float: left;
+    margin-left: 10%;
+    width: 18em;
 }
-.footer-navigation nav {
-    margin-left: 16%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: flex-start;
+.copyright-info > span {
+    display: inline-block;
+}
+.copyright-info > span:not(:last-child) {
+    padding-right: 10px;
+}
+.footer-navigation {
+    position: absolute;
+    display: inline-block;
+    float: left;
+    margin-left:  58%;
 }
 .footer-navigation nav {
     font-size: 120%;
     line-height: 120%;
-    height: 8rem;
 }
 .footer-navigation nav > a {
-    width: 50%;
-    height: 2.5em;
+    display: block;
+    height: 2em;
     text-decoration: underline;
 }
