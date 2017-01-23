@@ -40,10 +40,10 @@ html(lang="ru")
 
 
                 div#content-area.content-area.xs-compact-menu.xs-compact-news
-                    section#nav-compact.nav-compact.graybg.whitetext(v-bind:class="{ 'xs-hidden': !(nav_main.compact && news.compact) }")
+                    section#nav-compact.nav-compact.graybg.whitetext(v-bind:class="{ 'xs-hidden': !(nav_main.compact && news.compact), 'sm1-hidden': !(nav_main.compact && news.compact)}")
                         span.menu-hamburger.glyphicon.glyphicon-menu-hamburger(v-on:click="toggleNavCompacticity")
                         span.label-news(v-on:click="toggleNewsCompacticity") Новости
-                    section#nav-main.nav-main.graybg.whitetext(v-bind:class="{ 'xs-hidden': nav_main.compact }")
+                    section#nav-main.nav-main.graybg.whitetext(v-bind:class="{ 'xs-hidden': nav_main.compact, 'sm1-hidden': nav_main.compact}")
                         span.btn-close(v-on:click="toggleNavCompacticity") &times;
                         nav
                             a(href='#') Главная
@@ -52,7 +52,7 @@ html(lang="ru")
                             a(href='#') Прайс-лист
                             a(href='#') Контакты
 
-                    section#newscontainer.news-container.whitetext.graybg(v-if="news.visible" v-bind:class="{ 'xs-hidden': news.compact }")
+                    section#newscontainer.news-container.whitetext.graybg(v-if="news.visible" v-bind:class="{ 'xs-hidden': news.compact, 'sm1-hidden': news.compact }")
                         span.btn-close(v-on:click="toggleNewsCompacticity") &times;
                         //span.news-heading Новости
                         h2 Новости

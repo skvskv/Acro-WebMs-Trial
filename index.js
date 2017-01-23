@@ -70,6 +70,7 @@ window.addEventListener('load',function () {
             }
         },
         mounted: function () {
+            // 'sm1-hidden'
             this.nav_main.compact = this.initFromClass('xs-compact-menu');
             this.news.compact = this.initFromClass('xs-compact-news');
             console.warn('Nav. compact: ' + JSON.stringify(this.nav_main.compact));

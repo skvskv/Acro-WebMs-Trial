@@ -23,7 +23,6 @@ body {
     max-width: 1400px;
     width: 100%;
     margin: auto;
-    height: 2000px;
 }
 
 .sm1-hidden {
@@ -74,25 +73,6 @@ body {
 }
 .header .company-phones, .header .company-brief, .header .company-brief > span {
 }
-
-
-.menu {
-    width: 100%;
-}
-.menu-content {
-    height: 210px;
-}
-
-
-.footer {
-    width: 100%;
-}
-.footer-content {
-    height: 220px;
-    position: relative;
-    padding-top: 50px;
-    padding-bottom: 10px;
-}
 .copyright-info {
     position: absolute;
     display: inline-block;
@@ -105,6 +85,105 @@ body {
 }
 .copyright-info > span:not(:last-child) {
     padding-right: 10px;
+}
+
+
+
+
+
+
+.nav-compact {
+    padding-left: 7px;
+    padding-right: 7px;
+    font-size: 220%;
+    line-height: 150%
+}
+.nav-compact .menu-hamburger {
+    top: 3px;
+    padding-right: 10px;
+    margin-right: 10px;
+    border-right-width: 1px;
+    border-right-style: solid;
+}
+
+.nav-compact .label-news {
+
+}
+
+
+
+.nav-main {
+    position: relative;
+    padding: 10px 7px 3px;
+    font-size: 120%;
+    width: 100%;
+    margin-right: auto;
+    margin-left:  auto;
+}
+.nav-main nav {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.nav-main nav {
+    font-size: 120%;
+    line-height: 120%;
+    height: 8.5rem;
+}
+.nav-main nav > a {
+    display: block;
+    height: 2.5em;
+    margin-left: 1rem;
+    text-decoration: none;
+}
+.nav-main nav > a:hover {
+    text-decoration: underline;
+}
+
+
+.news-container {
+    position: relative;
+    padding: 10px 1rem 7px 1.5rem;
+}
+.news-container h2 {
+    margin-top: 0;
+}
+.news-article-date {
+    letter-spacing: 0.03rem;
+    display: block;
+}
+.news-article-link {
+    letter-spacing: 0.02rem;
+    font-size: 130%;
+    display: block;
+    margin-bottom: 1.5rem;
+}
+
+
+
+
+
+
+.content-container {
+    padding-left: 5px;
+    padding-right: 10px;
+}
+.content-container .content {
+    text-align: justify;
+}
+
+
+
+.footer {
+    width: 100%;
+}
+
+.footer-content {
+    height: 220px;
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 10px;
 }
 .footer-navigation {
     position: absolute;
@@ -121,3 +200,4 @@ body {
     height: 2em;
     text-decoration: underline;
 }
+
