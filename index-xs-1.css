@@ -175,19 +175,32 @@ body {
     margin-right: auto;
     margin-left:  auto;
 }
-.footer-navigation nav {
+.footer-navigation ul,
+.footer-navigation ul > li
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.footer-navigation nav,
+.footer-navigation ul
+{
     margin-left: 16%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: flex-start;
 }
-.footer-navigation nav {
+.footer-navigation nav,
+.footer-navigation ul
+{
     font-size: 120%;
     line-height: 120%;
     height: 8rem;
 }
-.footer-navigation nav > a {
+.footer-navigation nav > a,
+.footer-navigation ul > li
+{
     width: 50%;
     height: 2.5em;
     text-decoration: underline;

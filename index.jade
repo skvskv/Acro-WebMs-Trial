@@ -9,7 +9,6 @@ html(lang="ru")
 
         link(rel="stylesheet" href="normalize-v1.css")
         link(rel="stylesheet" href="bootstrap/css/bootstrap.css")
-        //link(rel="stylesheet" href="responsive-nav/responsive-nav.css")
         link(rel="stylesheet" href="utility.css")
         link(rel="stylesheet" href="units.css")
         link(rel="stylesheet" href="color-theme.css")
@@ -45,16 +44,26 @@ html(lang="ru")
                         span.label-news(v-on:click="toggleNewsCompacticity") Новости
                     section#nav-main.nav-main.graybg.whitetext(v-bind:class="{ 'xs-hidden': nav_main.compact, 'sm1-hidden': nav_main.compact}")
                         span.btn-close(v-on:click="toggleNavCompacticity") &times;
-                        nav
+                        //nav
                             a(href='#') Главная
                             a(href='#') Каталог
                             a(href='#') Доставка и оплата
                             a(href='#') Прайс-лист
                             a(href='#') Контакты
+                        ul
+                            li
+                                a(href='#') Главная
+                            li
+                                a(href='#') Каталог
+                            li
+                                a(href='#') Доставка и оплата
+                            li
+                                a(href='#') Прайс-лист
+                            li
+                                a(href='#') Контакты
 
                     section#newscontainer.news-container.whitetext.graybg(v-if="news.visible" v-bind:class="{ 'xs-hidden': news.compact, 'sm1-hidden': news.compact }")
                         span.btn-close(v-on:click="toggleNewsCompacticity") &times;
-                        //span.news-heading Новости
                         h2 Новости
                         span.news-article-date 14 сентября 2013 г.
                         a.news-article-link
@@ -121,14 +130,25 @@ html(lang="ru")
 
 
                     section.footer-navigation(v-if="navigation.visible")
-                        nav
+                        //nav
                             a(href='#') Главная
                             a(href='#') Каталог
                             a(href='#') Доставка и оплата
                             a(href='#') Прайс-лист
                             a(href='#') Контакты
+                        ul
+                            li
+                                a(href='#') Главная
+                            li
+                                a(href='#') Каталог
+                            li
+                                a(href='#') Доставка и оплата
+                            li
+                                a(href='#') Прайс-лист
+                            li
+                                a(href='#') Контакты
+
+
         script(type="text/javascript" src="https://unpkg.com/vue/dist/vue.js")
-        //script(type="text/javascript" src="responsive-nav/responsive-nav.js")
-        //script(type="text/javascript" src="responsive-nav/responsive-nav.min.js")
         script(type="text/javascript" src="index.js")
 

@@ -120,24 +120,43 @@ body {
     margin-right: auto;
     margin-left:  auto;
 }
-.nav-main nav {
+.nav-main ul,
+.nav-main ul > li
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.nav-main ul > li > a {
+    display: block;
+    width: 100%;
+}
+.nav-main nav,
+.nav-main ul
+{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: flex-start;
 }
-.nav-main nav {
+.nav-main nav,
+.nav-main ul
+{
     font-size: 120%;
     line-height: 120%;
     height: 8.5rem;
 }
-.nav-main nav > a {
+.nav-main nav > a,
+.nav-main ul > li > a
+/*.nav-main ul > li*/
+{
     display: block;
     height: 2.5em;
     margin-left: 1rem;
     text-decoration: none;
 }
-.nav-main nav > a:hover {
+.nav-main nav > a:hover,
+.nav-main ul > a:hover {
     text-decoration: underline;
 }
 
@@ -191,11 +210,22 @@ body {
     float: left;
     margin-left:  58%;
 }
-.footer-navigation nav {
+.footer-navigation ul,
+.footer-navigation ul > li
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.footer-navigation nav,
+.footer-navigation ul
+{
     font-size: 120%;
     line-height: 120%;
 }
-.footer-navigation nav > a {
+.footer-navigation nav > a,
+.footer-navigation ul > li > a
+{
     display: block;
     height: 2em;
     text-decoration: underline;
