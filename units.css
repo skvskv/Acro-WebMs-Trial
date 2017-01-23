@@ -39,3 +39,17 @@ a:focus
     text-decoration: none;
 }
 
+.btn-close {
+    /*top: 10px;*/
+    /*right: 10px;*/
+    /*position: absolute;*/
+    float: right;
+    font-size: 180%;
+    font-weight: bold;
+    line-height: 1;
+    color: #ffffff;
+    text-shadow: 0 1px 0 #000000;
+    opacity: 0.7;
+}
+
+

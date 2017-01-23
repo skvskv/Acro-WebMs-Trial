@@ -16,6 +16,11 @@ body {
     /*height: 2000px;*/
 }
 
+.xs-compact-menu .nav-main,
+.xs-hidden
+{
+    display: none;
+}
 
 
 .header {
@@ -76,25 +81,75 @@ body {
 }
 
 
+.nav-compact {
+    padding-left: 7px;
+    padding-right: 7px;
+    font-size: 220%;
+    line-height: 150%
+}
+.nav-compact .menu-hamburger {
+    top: 3px;
+    padding-right: 10px;
+    margin-right: 10px;
+    border-right-width: 1px;
+    border-right-style: solid;
+}
+
+.nav-compact .label-news {
+
+}
+
 
 
 .nav-main {
-    width: 100%;
+    position: relative;
+    padding: 10px 7px 3px;
     font-size: 120%;
-    /*line-height: 120%;*/
+    width: 100%;
+    margin-right: auto;
+    margin-left:  auto;
 }
 .nav-main nav {
-    display: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
 }
-.nav-main a {
+.nav-main nav {
+    font-size: 120%;
+    line-height: 120%;
+    height: 8.5rem;
+}
+.nav-main nav > a {
+    display: block;
+    height: 2.5em;
+    margin-left: 1rem;
     text-decoration: none;
 }
-.nav-main a:hover {
+.nav-main nav > a:hover {
     text-decoration: underline;
 }
-/*.nav-main a:not(:first-child) {*/
-    /*display: none;*/
-/*}*/
+
+
+.news-container {
+    position: relative;
+    padding: 10px 1rem 7px 1.5rem;
+}
+.news-container h2 {
+    margin-top: 0;
+}
+.news-article-date {
+    display: block;
+}
+.news-article-link {
+    display: block;
+    margin-bottom: 1.5rem;
+}
+
+
+
+
+
 
 .content-container {
     padding-left: 5px;
@@ -138,3 +193,6 @@ body {
     height: 2.5em;
     text-decoration: underline;
 }
+
+
+

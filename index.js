@@ -1,4 +1,13 @@
 window.addEventListener('load',function () {
+    var initFromClass2 = function (obj, className) {
+        var isClassSet = (-1 !== obj.className.indexOf(className));
+        if (isClassSet) {
+            obj.classList.remove(className);
+        }
+
+        return isClassSet;
+    };
+
     var scope = window,
         companyLogos = [
             {src: "images/header-company-logo.png"},
@@ -50,50 +59,48 @@ window.addEventListener('load',function () {
                 visible: true
             },
             news: {
-                visible: true
+                visible: true,
+                compact: undefined
             },
             content: {
                 visible: true
             },
             nav_main: {
-                display: undefined
+                compact: undefined
             }
         },
+        mounted: function () {
+            this.nav_main.compact = this.initFromClass('xs-compact-menu');
+            this.news.compact = this.initFromClass('xs-compact-news');
+            console.warn('Nav. compact: ' + JSON.stringify(this.nav_main.compact));
+            console.warn('News compact: ' + JSON.stringify(this.news.compact));
+        },
         methods: {
-            navHamburgerCkickHandler: function () {
-                console.warn(JSON.stringify(this.nav_main.display));
-                if (this.nav_main.display === 'block') {
-                    this.navMobileMenuHide();
-                }
-                else {
-                    this.navMobileMenuShow();
-                }
-            },
-            navMobileMenuShow: function () {
-                this.nav_main.display = 'block';
+            initFromClass: function (className) {
+                var isClassSet = (-1 !== this.$el.className.indexOf(className));
 
-            },
-            navMobileMenuHide: function () {
-                this.nav_main.display = 'none';
+                console.log(JSON.stringify(this.$el.className));
+                console.warn(className);
+                console.warn(isClassSet);
 
-            }
+                if (isClassSet) {
+                    this.$el.classList.remove(className);
+                }
+
+                return isClassSet;
+            },
+            toggleNavCompacticity: function () {
+                this.nav_main.compact = !this.nav_main.compact;
+            },
+            toggleNewsCompacticity: function () {
+                this.news.compact = !this.news.compact;
+            },
+            expandMobileMenu: function () {},
+            collapseMobileMenu: function () {},
+            expandMobileNews: function () {},
+            collapseMobileNews: function () {}
         }
     });
-
-    // scope.navmain = new Vue({
-    //     el: '#nav-main',
-    //     data: {
-    //         color: undefined
-    //     },
-    //     methods:{
-    //         clickHandler: function () {
-    //
-    //         },
-    //         showMenu: function () {
-    //
-    //         }
-    //     }
-    // });
 
 }, false);
 

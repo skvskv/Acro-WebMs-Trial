@@ -21,7 +21,7 @@ html(lang="ru")
         div.realm
             div.webpage
 
-                header(v-if="visible").header.lightgray-bg#header
+                header#header(v-if="visible").header.lightgray-bg
                     div.header-content.block-horizontally-centered.row
                         div.company-logo.image-wrapper.lg-element-vertically-centered.col-xs-1.col-xs-offset-1
                             img(v-if="logo.visible" v-bind:src="logo.src" v-bind:width="logo.width" v-bind:height="logo.height" v-bind:alt="logo.alt")
@@ -39,27 +39,37 @@ html(lang="ru")
                                     a(href='callto://74997777777') +7(499) 777-77-77
 
 
-                div.content-area#content-area
-                    section.nav-main.graybg.whitetext#nav-main(v-if="mainmenu.visible")
-                        span.glyphicon.glyphicon-menu-hamburger(style="display: block; font-size:400%;" v-on:click='navHamburgerCkickHandler' v-bind:style='{ display: ("block" === nav_main.display) ? "none" : "block" }')
-                        nav(v-bind:style='{ display: nav_main.display}')
+                div#content-area.content-area.xs-compact-menu.xs-compact-news
+                    section#nav-compact.nav-compact.graybg.whitetext(v-bind:class="{ 'xs-hidden': !(nav_main.compact && news.compact) }")
+                        span.menu-hamburger.glyphicon.glyphicon-menu-hamburger(v-on:click="toggleNavCompacticity")
+                        span.label-news(v-on:click="toggleNewsCompacticity") Новости
+                    section#nav-main.nav-main.graybg.whitetext(v-bind:class="{ 'xs-hidden': nav_main.compact }")
+                        span.btn-close(v-on:click="toggleNavCompacticity") &times;
+                        nav
                             a(href='#') Главная
                             a(href='#') Каталог
                             a(href='#') Доставка и оплата
                             a(href='#') Прайс-лист
                             a(href='#') Контакты
 
-                    section.news-container(v-if="news.visible")
-                        span.news-heading Новости
+                    section#newscontainer.news-container.whitetext.graybg(v-if="news.visible" v-bind:class="{ 'xs-hidden': news.compact }")
+                        span.btn-close(v-on:click="toggleNewsCompacticity") &times;
+                        //span.news-heading Новости
+                        h2 Новости
                         span.news-article-date 14 сентября 2013 г.
-                        span.news-article-content Редизайн веб-сайта архитектурного бюро.
+                        a.news-article-link
+                            span.news-article-link-text Редизайн веб-сайта архитектурного бюро.
                         span.news-article-date 14 сентября 2013 г.
-                        span.news-article-content Раскрутка интернет-магазина декоративных стикеров и виниловых наклеек.
+                        a.news-article-link
+                            span.news-article-link-text Раскрутка интернет-магазина декоративных стикеров и виниловых наклеек.
                         span.news-article-date 14 сентября 2013 г.
-                        span.news-article-content SEO-продвижение сайта поставщика дизель генераторов.
+                        a.news-article-link
+                            span.news-article-link-text SEO-продвижение сайта поставщика дизель генераторов.
                         span.news-article-date 14 сентября 2013 г.
-                        span.news-article-content Поисковое продвижение веб-сайта поставщика гидрооборудования.
-                        span.news-archive Архив новостей
+                        a.news-article-link
+                            span.news-article-link-text Поисковое продвижение веб-сайта поставщика гидрооборудования.
+                        a.news-archive-link
+                            span.news-archive Архив новостей
 
 
                     section.content-container(v-if="content.visible")

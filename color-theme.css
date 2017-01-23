@@ -37,3 +37,17 @@ body {
 .webpage:last-child::after {
     background-color: #ffffff;
 }
+
+.nav-main .btn-close {
+    color: #ffffff;
+    text-shadow: 0 1px 0 #000000;
+}
+
+.news-container .btn-close {
+    color: #ffffff;
+    text-shadow: 0 1px 0 #000000;
+}
+
+.nav-compact .menu-hamburger {
+    border-right-color: white;
+}

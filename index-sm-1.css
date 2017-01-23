@@ -26,7 +26,9 @@ body {
     height: 2000px;
 }
 
-
+.sm1-hidden {
+    display: none;
+}
 
 .header {
     display: block;
