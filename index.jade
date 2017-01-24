@@ -12,8 +12,9 @@ html(lang="ru")
         link(rel="stylesheet" href="utility.css")
         link(rel="stylesheet" href="units.css")
         link(rel="stylesheet" href="color-theme.css")
-        link(rel="stylesheet" href="index-xs-1.css" media="all AND (min-width:310px) AND (max-width:449px)")
-        link(rel="stylesheet" href="index-sm-1.css" media="all AND (min-width:450px) AND (max-width:1024px)")
+        link(rel="stylesheet" href="index-xs-1.css" media="all AND (max-width:449px)")
+        link(rel="stylesheet" href="index-sm-1.css" media="all AND (min-width:450px) AND (max-width:799px)")
+        link(rel="stylesheet" href="index-lg-1.css" media="all AND (min-width:800px) AND (max-width:1500px)")
         //link(rel="stylesheet" href="index.css")
 
     body
@@ -22,15 +23,15 @@ html(lang="ru")
 
                 header#header(v-if="visible").header.lightgray-bg
                     div.header-content.block-horizontally-centered.row
-                        div.company-logo.image-wrapper.lg-element-vertically-centered.col-xs-1.col-xs-offset-1
+                        div.company-logo.image-wrapper.lg-element-vertically-centered.fly.flyleft
                             img(v-if="logo.visible" v-bind:src="logo.src" v-bind:width="logo.width" v-bind:height="logo.height" v-bind:alt="logo.alt")
 
-                        div(v-if="brief.visible").company-brief.graytext.col-xs-20.col-xs-offset-2
+                        div(v-if="brief.visible").company-brief.graytext.fly.flyleft
                             span.name Название компании
                             br
                             span.slogan самая клевая компания
 
-                        div(v-if="phones.visible").company-phones.graytext.col-xs-offset-1
+                        div(v-if="phones.visible").company-phones.graytext.fly.flyleft
                             ul.phones-list
                                 li
                                     a(href='callto://74997777777') +7(499) 777-77-77
@@ -39,11 +40,11 @@ html(lang="ru")
 
 
                 div#content-area.content-area.xs-compact-menu.xs-compact-news
-                    section#nav-compact.nav-compact.graybg.whitetext(v-bind:class="{ 'xs-hidden': !(nav_main.compact && news.compact), 'sm1-hidden': !(nav_main.compact && news.compact)}")
+                    section#nav-compact.nav-compact.graybg.whitetext.lg-hidden(v-bind:class="{ 'xs-hidden': !(nav_main.compact && news.compact), 'sm1-hidden': !(nav_main.compact && news.compact)}")
                         span.menu-hamburger.glyphicon.glyphicon-menu-hamburger(v-on:click="toggleNavCompacticity")
                         span.label-news(v-on:click="toggleNewsCompacticity") Новости
                     section#nav-main.nav-main.graybg.whitetext(v-bind:class="{ 'xs-hidden': nav_main.compact, 'sm1-hidden': nav_main.compact}")
-                        span.btn-close(v-on:click="toggleNavCompacticity") &times;
+                        span.btn-close.lg-hidden(v-on:click="toggleNavCompacticity") &times;
                         //nav
                             a(href='#') Главная
                             a(href='#') Каталог
@@ -63,7 +64,7 @@ html(lang="ru")
                                 a(href='#') Контакты
 
                     section#newscontainer.news-container.whitetext.graybg(v-if="news.visible" v-bind:class="{ 'xs-hidden': news.compact, 'sm1-hidden': news.compact }")
-                        span.btn-close(v-on:click="toggleNewsCompacticity") &times;
+                        span.btn-close.lg-hidden(v-on:click="toggleNewsCompacticity") &times;
                         h2 Новости
                         span.news-article-date 14 сентября 2013 г.
                         a.news-article-link

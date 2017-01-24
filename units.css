@@ -1,3 +1,9 @@
+html {
+    font-size: 14px;
+    font-family: "PT Sans", sans-serif;
+    background-color: black;
+}
+
 body {
     position: relative;
 }
@@ -53,3 +59,29 @@ a:focus
 }
 
 
+.nav-main ul,
+.nav-main ul > li
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-navigation ul,
+.footer-navigation ul > li
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+.fly {
+    position: relative;
+    min-height: 1px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.flyleft {
+    float: left;
+}

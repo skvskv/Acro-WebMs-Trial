@@ -1,0 +1,130 @@
+/**
+*   Header loooks fine down to W:1024px (on initial settings)
+*   Ok on W:768px (with .header-content width: auto)
+*   Bit ugly slogan on W:640px (with .header-content width: auto)
+*
+*/
+
+body {
+    font-size: 100%;    /* 14px */
+    line-height: 157%;  /* 22px */
+    max-width: 1400px;
+    width: 100%;
+    margin: auto;
+}
+
+.lg-hidden {
+    display: none;
+}
+
+
+.header {
+    display: block;
+    width: 100%;
+}
+
+
+.header-content {
+    height: 210px;
+    max-width: 1000px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.header-content > div {
+    margin-right: 13px;
+}
+.header .company-logo {
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+}
+
+.header .company-phones, .header .company-brief, .header .company-brief > span {
+    /*display: inline-block;*/
+}
+
+.header .company-brief .name {
+    /*max-width: 200px;*/
+    /*font-weight: bold;*/
+    /*font-size: 240%;*/
+    /*line-height: 80%;*/
+}
+
+.header .company-brief .slogan {
+    /*font-size: 112%;*/
+}
+
+
+
+.content-area {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    /*height: 100%;*/
+    /*height: 100vh;*/
+}
+.content-container {
+    /*position: absolute;*/
+    /*top: 100px;*/
+    /*left: 100px;*/
+    padding-left: 5px;
+    padding-right: 10px;
+}
+.content-container .content {
+    text-align: justify;
+    width: 570px;
+}
+
+
+
+
+
+
+.footer {
+    width: 100%;
+}
+
+.footer-content {
+    height: 220px;
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+
+.copyright-info {
+    position: absolute;
+    display: inline-block;
+    float: left;
+    margin-left: 10%;
+    width: 18em;
+}
+.copyright-info > span {
+    display: inline-block;
+}
+.copyright-info > span:not(:last-child) {
+    padding-right: 10px;
+}
+
+
+.footer-navigation {
+    position: absolute;
+    display: inline-block;
+    float: left;
+    margin-left:  58%;
+}
+.footer-navigation nav,
+.footer-navigation ul
+{
+    font-size: 120%;
+    line-height: 120%;
+}
+.footer-navigation nav > a,
+.footer-navigation ul > li > a
+{
+    display: block;
+    height: 2em;
+    text-decoration: underline;
+}
+

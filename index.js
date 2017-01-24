@@ -1,13 +1,4 @@
 window.addEventListener('load',function () {
-    var initFromClass2 = function (obj, className) {
-        var isClassSet = (-1 !== obj.className.indexOf(className));
-        if (isClassSet) {
-            obj.classList.remove(className);
-        }
-
-        return isClassSet;
-    };
-
     var scope = window,
         companyLogos = [
             {src: "images/header-company-logo.png"},
