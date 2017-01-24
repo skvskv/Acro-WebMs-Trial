@@ -2,7 +2,6 @@
 *   One might want to use Google Web Font Loader
 *   https://github.com/typekit/webfontloader
 */
-@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&subset=cyrillic,cyrillic-ext,latin-ext');
 
 .image-wrapper {
     line-height: 0;
@@ -30,24 +29,4 @@
     -webkit-transform: perspective(1px) translateY(-50%);
     -ms-transform: perspective(1px) translateY(-50%);
     transform: perspective(1px) translateY(-50%);
-}
-
-@media all AND (min-width:310px) AND (max-width:991px) {
-    .xs-element-vertically-centered {
-        position: relative;
-        top: 50%;
-        -webkit-transform: perspective(1px) translateY(-50%);
-        -ms-transform: perspective(1px) translateY(-50%);
-        transform: perspective(1px) translateY(-50%);
-    }
-}
-
-@media all AND (min-width:992px) AND (max-width:1199px) {
-    .lg-element-vertically-centered {
-        position: relative;
-        top: 50%;
-        -webkit-transform: perspective(1px) translateY(-50%);
-        -ms-transform: perspective(1px) translateY(-50%);
-        transform: perspective(1px) translateY(-50%);
-    }
 }

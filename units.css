@@ -30,14 +30,6 @@ body {
     width: auto;
 }
 
-.company-brief {
-    position: relative;
-}
-
-.company-brief > * {
-    position: absolute;
-}
-
 a,
 a:visited,
 a:focus
@@ -79,9 +71,14 @@ a:focus
 .fly {
     position: relative;
     min-height: 1px;
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 0;
+    padding-right: 0;
 }
 .flyleft {
     float: left;
+}
+
+.header .company-phones a
+{
+    font-family: 'Open Sans', sans-serif;
 }

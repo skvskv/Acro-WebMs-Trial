@@ -25,6 +25,25 @@ body {
     display: none;
 }
 
+.sm-fly {
+    position: relative;
+    min-height: 1px;
+    padding-left: 0;
+    padding-right: 0;
+}
+.sm-flyleft {
+    float: left;
+}
+
+.company-brief {
+    position: relative;
+}
+
+.company-brief > * {
+    position: absolute;
+}
+
+
 .header {
     display: block;
     width: 100%;

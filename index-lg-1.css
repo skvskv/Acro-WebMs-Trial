@@ -17,6 +17,14 @@ body {
     display: none;
 }
 
+.lg-element-vertically-centered {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: perspective(1px) translateY(-50%);
+    -ms-transform: perspective(1px) translateY(-50%);
+    transform: perspective(1px) translateY(-50%);
+}
+
 
 .header {
     display: block;
@@ -25,6 +33,7 @@ body {
 
 
 .header-content {
+    position: relative;
     height: 210px;
     max-width: 1000px;
     padding-left: 10px;
@@ -39,20 +48,38 @@ body {
     width: 100px;
 }
 
+.header .company-brief {
+    left: 115px;
+    padding-top: 20px;
+}
+.header .company-brief .name {
+    display: inline-block;
+    max-width: 200px;
+    font-weight: bold;
+    font-size: 240%;
+    line-height: 80%;
+    margin-bottom: 10px;
+}
+.header .company-brief .slogan {
+    display: inline-block;
+    font-size: 112%;
+    margin-bottom: 15px;
+}
+.header .company-phones {
+    right: 0px;
+}
+/*.header .company-phones,*/
+.header .company-phones a
+{
+    font-size: 285%;
+    line-height: 100%;
+}
+
 .header .company-phones, .header .company-brief, .header .company-brief > span {
     /*display: inline-block;*/
 }
 
-.header .company-brief .name {
-    /*max-width: 200px;*/
-    /*font-weight: bold;*/
-    /*font-size: 240%;*/
-    /*line-height: 80%;*/
-}
 
-.header .company-brief .slogan {
-    /*font-size: 112%;*/
-}
 
 
 
@@ -77,6 +104,27 @@ body {
     width: 570px;
 }
 
+.news-container {
+    position: absolute;
+    /*padding: 22px 35px 0 35px;*/
+    padding: 22px 35px;
+    width: 350px;
+    height: 740px;
+}
+.news-container h2 {
+    margin-bottom: 10px;
+}
+.news-container .news-article-date {
+    display: block;
+    margin-top: 30px;
+}
+.news-container .news-archive-link {
+    margin-top: 35px;
+    margin-left: 160px;
+    display: block;
+    text-decoration: underline;
+
+}
 
 .nav-main ul {
     font-size: 215%;

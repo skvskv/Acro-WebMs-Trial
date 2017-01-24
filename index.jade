@@ -7,6 +7,9 @@ html(lang="ru")
         meta(name="mobile-web-app-capable" content="yes")
         title Название компании
 
+        // One might want to use Google Web Font Loader https://github.com/typekit/webfontloader
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&subset=cyrillic,cyrillic-ext,latin-ext")
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600")
         link(rel="stylesheet" href="normalize-v1.css")
         link(rel="stylesheet" href="bootstrap/css/bootstrap.css")
         link(rel="stylesheet" href="utility.css")
@@ -14,7 +17,7 @@ html(lang="ru")
         link(rel="stylesheet" href="color-theme.css")
         link(rel="stylesheet" href="index-xs-1.css" media="all AND (max-width:449px)")
         link(rel="stylesheet" href="index-sm-1.css" media="all AND (min-width:450px) AND (max-width:799px)")
-        link(rel="stylesheet" href="index-lg-1.css" media="all AND (min-width:800px) AND (max-width:1500px)")
+        link(rel="stylesheet" href="index-lg-1.css" media="all AND (min-width:800px)")
         //link(rel="stylesheet" href="index.css")
 
     body
@@ -23,15 +26,15 @@ html(lang="ru")
 
                 header#header(v-if="visible").header.lightgray-bg
                     div.header-content.block-horizontally-centered.row
-                        div.company-logo.image-wrapper.lg-element-vertically-centered.fly.flyleft
+                        div.company-logo.image-wrapper.lg-element-vertically-centered.xs-fly.xs-flyleft.sm-fly.sm-flyleft
                             img(v-if="logo.visible" v-bind:src="logo.src" v-bind:width="logo.width" v-bind:height="logo.height" v-bind:alt="logo.alt")
 
-                        div(v-if="brief.visible").company-brief.graytext.fly.flyleft
+                        div(v-if="brief.visible").lg-element-vertically-centered.company-brief.graytext.xs-fly.xs-flyleft.sm-fly.sm-flyleft
                             span.name Название компании
                             br
                             span.slogan самая клевая компания
 
-                        div(v-if="phones.visible").company-phones.graytext.fly.flyleft
+                        div(v-if="phones.visible").company-phones.lg-element-vertically-centered.graytext.xs-fly.xs-flyleft.sm-fly.sm-flyleft
                             ul.phones-list
                                 li
                                     a(href='callto://74997777777') +7(499) 777-77-77
