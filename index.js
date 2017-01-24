@@ -41,8 +41,10 @@ window.addEventListener('load',function () {
         }
     });
 
-    scope.content_area = new Vue({
-        el: '#content-area',
+    // scope.content_area = new Vue({
+    scope.webpage = new Vue({
+        // el: '#content-area',
+        el: '#webpage',
         data: {
             mainmenu: {
                 visible: true

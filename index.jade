@@ -22,7 +22,7 @@ html(lang="ru")
 
     body
         div.realm
-            div.webpage
+            div.webpage#webpage.xs-compact-menu.xs-compact-news
 
                 header#header(v-if="visible").header.lightgray-bg
                     div.header-content.block-horizontally-centered.row
@@ -65,7 +65,7 @@ html(lang="ru")
                         li
                             a(href='#') Контакты
 
-                div#content-area.content-area.xs-compact-menu.xs-compact-news
+                div#content-area.content-area
 
                     section#newscontainer.news-container.whitetext.graybg(v-if="news.visible" v-bind:class="{ 'xs-hidden': news.compact, 'sm1-hidden': news.compact }")
                         span.btn-close.lg-hidden(v-on:click="toggleNewsCompacticity") &times;
