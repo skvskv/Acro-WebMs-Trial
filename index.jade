@@ -42,29 +42,30 @@ html(lang="ru")
                                     a(href='callto://74997777777') +7(499) 777-77-77
 
 
-                div#content-area.content-area.xs-compact-menu.xs-compact-news
-                    section#nav-compact.nav-compact.graybg.whitetext.lg-hidden(v-bind:class="{ 'xs-hidden': !(nav_main.compact && news.compact), 'sm1-hidden': !(nav_main.compact && news.compact)}")
-                        span.menu-hamburger.glyphicon.glyphicon-menu-hamburger(v-on:click="toggleNavCompacticity")
-                        span.label-news(v-on:click="toggleNewsCompacticity") Новости
-                    section#nav-main.nav-main.graybg.whitetext(v-bind:class="{ 'xs-hidden': nav_main.compact, 'sm1-hidden': nav_main.compact}")
-                        span.btn-close.lg-hidden(v-on:click="toggleNavCompacticity") &times;
-                        //nav
+                section#nav-compact.nav-compact.graybg.whitetext.lg-hidden(v-bind:class="{ 'xs-hidden': !(nav_main.compact && news.compact), 'sm1-hidden': !(nav_main.compact && news.compact)}")
+                    span.menu-hamburger.glyphicon.glyphicon-menu-hamburger(v-on:click="toggleNavCompacticity")
+                    span.label-news(v-on:click="toggleNewsCompacticity") Новости
+                section#nav-main.nav-main.graybg.whitetext(v-bind:class="{ 'xs-hidden': nav_main.compact, 'sm1-hidden': nav_main.compact}")
+                    span.btn-close.lg-hidden(v-on:click="toggleNavCompacticity") &times;
+                    //nav
+                        a(href='#') Главная
+                        a(href='#') Каталог
+                        a(href='#') Доставка и оплата
+                        a(href='#') Прайс-лист
+                        a(href='#') Контакты
+                    ul
+                        li
                             a(href='#') Главная
+                        li
                             a(href='#') Каталог
+                        li
                             a(href='#') Доставка и оплата
+                        li
                             a(href='#') Прайс-лист
+                        li
                             a(href='#') Контакты
-                        ul
-                            li
-                                a(href='#') Главная
-                            li
-                                a(href='#') Каталог
-                            li
-                                a(href='#') Доставка и оплата
-                            li
-                                a(href='#') Прайс-лист
-                            li
-                                a(href='#') Контакты
+
+                div#content-area.content-area.xs-compact-menu.xs-compact-news
 
                     section#newscontainer.news-container.whitetext.graybg(v-if="news.visible" v-bind:class="{ 'xs-hidden': news.compact, 'sm1-hidden': news.compact }")
                         span.btn-close.lg-hidden(v-on:click="toggleNewsCompacticity") &times;
