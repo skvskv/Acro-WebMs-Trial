@@ -15,7 +15,7 @@ window.addEventListener('load',function () {
                 visible: true,
                 height: 100,
                 width:100,
-                src: companyLogos[3].src,
+                src: companyLogos[0].src,
                 alt: "название компании, самая клевая компания"
             },
             brief: {
@@ -34,11 +34,9 @@ window.addEventListener('load',function () {
             visible: true,
             copyrightInfo: {
                 visible: true
-                // visible: false
             },
             navigation: {
                 visible: true
-                // visible: false
             }
         }
     });
@@ -61,7 +59,6 @@ window.addEventListener('load',function () {
             }
         },
         mounted: function () {
-            // 'sm1-hidden'
             this.nav_main.compact = this.initFromClass('xs-compact-menu');
             this.news.compact = this.initFromClass('xs-compact-news');
             console.warn('Nav. compact: ' + JSON.stringify(this.nav_main.compact));
@@ -86,11 +83,7 @@ window.addEventListener('load',function () {
             },
             toggleNewsCompacticity: function () {
                 this.news.compact = !this.news.compact;
-            },
-            expandMobileMenu: function () {},
-            collapseMobileMenu: function () {},
-            expandMobileNews: function () {},
-            collapseMobileNews: function () {}
+            }
         }
     });
 
